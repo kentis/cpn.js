@@ -1,0 +1,53 @@
+{
+  "name": "@k1s/cpn.js",
+  "version": "0.1.0",
+  "description": "Pure JS/TS CPN impementation and simulation engine",
+  "keywords": [
+    "cpn",
+    "coloured-petri-nets",
+    "petri-nets",
+    "simulation",
+    "formal-methods"
+  ],
+  "author": "kentis",
+  "license": "(MIT OR GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentis/CPNEditor"
+  },
+  "homepage": "https://github.com/kentis/CPNEditor/tree/main/packages/cpn-semantics",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist tsconfig.tsbuildinfo && tsup && tsc -p tsconfig.json --emitDeclarationOnly",
+    "examples": "pnpm run build && node examples/traffic-light.mjs && node examples/producer-consumer.mjs && node examples/sml-integration.mjs",
+    "test": "pnpm run build && vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  },
+  "peerDependencies": {
+    "@sosml/interpreter": "^1.6.11"
+  }
+}

@@ -1,0 +1,9 @@
+# Licensing Termsm
+
+This project is dual-licensed under the MIT License and the GNU General Public License v3.0 (GPLv3). You may choose to use this project under the terms of either license.
+
+* For the MIT License terms, see the `LICENSE-MIT` file.
+* For the GPLv3 License terms, see the `LICENSE-GPL` file.
+
+Please note: If you choose the MIT License, but utilize this project alongside its optional peer dependency `@sosml/interpreter`, your combined work will become subject to the copyleft terms of the GPLv3.
+
